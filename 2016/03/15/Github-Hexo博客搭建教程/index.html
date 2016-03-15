@@ -17,7 +17,7 @@ Windows安装Nod">
 Github为什么用Github1、GitHub Pages本用于介绍托管在GitHub的项目，不过，由于他的空间免费稳定，用来搭建一个博客再好不过了2、Github Pages有300M免费空间，资料自己管理，保存可靠。3、Github Pages可以被认为是用户编写的、托管在github上的静态网页。
 安装准备软件1、Node.js2、Git
 Windows安装Nod">
-<meta property="og:updated_time" content="2016-03-15T02:24:54.000Z">
+<meta property="og:updated_time" content="2016-03-15T02:29:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo博客搭建教程">
 <meta name="twitter:description" content="本文环境为windows
@@ -103,8 +103,9 @@ Windows安装Nod">
 <p>1、首先检查电脑上现有的ssh key。<br>    打开Git Bash，输入下面命令，若包含id_rsa和id_rsa.pub这两个文件说明本地存在ssh keys否则需要生成ssh keys（也可以按下面的方式生成新的）</p>
 <pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ls</span><br></pre></td></tr></table></figure>
 </code></pre><p>2、配置ssh keys。<br>    在终端输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"man@meeit.com"</span>   (邮箱换成自己的)</span><br></pre></td></tr></table></figure>
-<pre><code>然后出现
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"man@meeit.com"</span>   (邮箱换成自己的)</span><br></pre></td></tr></table></figure>
+
+然后出现
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Tekkub/.ssh/id_rsa):  (这里是输入你的SSH keys 保存的位置,不输入直接回车就是前面的默认路径)
 
@@ -133,7 +134,7 @@ machine {git account name}.github.com
 <h3 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h3><p>在我的电脑中建立一个名字叫Hexo的文件夹，然后在此文件夹中右键打开Git Bash，然后输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 <p>Hexo随后会自动在目标文件夹建立网站所需要的所有文件。</p>
-<p>现在我们已经搭建起本地的hexo博客了，执行以下命令(路径不要变)，然后到浏览器输入<a href="https://localhost:4000看看。如果未能正常打开可能是端口被占用可以用命令" target="_blank" rel="external">https://localhost:4000看看。如果未能正常打开可能是端口被占用可以用命令</a> hexo s -p 5000把端口设置成5000。</p>
+<p>现在我们已经搭建起本地的hexo博客了，执行以下命令(路径不要变)，然后到浏览器输入<a href="https://localhost:4000" target="_blank" rel="external">https://localhost:4000</a>看看。如果未能正常打开可能是端口被占用可以用命令 hexo s -p 5000把端口设置成5000。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s (默认端口是4000)</span><br></pre></td></tr></table></figure>
 <h3 id="配置Hexo和Github连接"><a href="#配置Hexo和Github连接" class="headerlink" title="配置Hexo和Github连接"></a>配置Hexo和Github连接</h3><p>要想让你的博客在互联网上让别人看到，还需要配置Hexo跟Github连接。打开Hexo根目录下的_config.yml文件。拉倒最后将最后一项改成如下形式。</p>
 <pre><code># Deployment
@@ -152,7 +153,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilssqqh00000wcfrq5rixyrq" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilsswrzk0001e8frp9ye799t" class="article-share-link">Share</a>
       
       
     </footer>
