@@ -17,7 +17,7 @@ Window">
 Github为什么用Github1、GitHub Pages本用于介绍托管在GitHub的项目，不过，由于他的空间免费稳定，用来搭建一个博客再好不过了2、Github Pages有300M免费空间，资料自己管理，保存可靠。3、Github Pages可以被认为是用户编写的、托管在github上的静态网页。
 安装准备软件1、Node.js2、Git
 Window">
-<meta property="og:updated_time" content="2016-03-15T07:08:34.000Z">
+<meta property="og:updated_time" content="2016-03-15T07:14:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo博客搭建教程">
 <meta name="twitter:description" content="本文的操作环境为Windows 7。
@@ -102,24 +102,28 @@ Window">
 <h3 id="SSH-Keys"><a href="#SSH-Keys" class="headerlink" title="SSH Keys"></a>SSH Keys</h3><p>远程仓库创建完成后需要和本地Git建立连接。这里是通过SSH Keys来实现的。</p>
 <p>1、首先检查电脑上现有的ssh key。<br>    打开Git Bash，输入下面命令，若包含id_rsa和id_rsa.pub这两个文件说明本地存在ssh keys否则需要生成ssh keys（也可以按下面的方式生成新的）</p>
 <pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ls</span><br></pre></td></tr></table></figure>
-</code></pre><p>2、配置ssh keys。</p>
-<pre><code>a. 在终端输入 
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"man@meeit.com"</span>   (邮箱换成自己的)</span><br></pre></td></tr></table></figure>
+</code></pre><p>2、配置ssh keys。<br>    在终端输入</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"man@meeit.com"</span>   (邮箱换成自己的)</span><br></pre></td></tr></table></figure>
 
-b. 出现以下提示语
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Tekkub/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
 
-    这里是输入你的SSH keys 保存的位置,不输入直接回车就是前面的默认路径
-c. 然后出现
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br></pre></td></tr></table></figure>
+出现以下提示语：
 
-    这里要你输入口令,可以直接回车
-d. 再然后
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Tekkub/.ssh/id_rsa): (这里是输入你的SSH keys 保存的位置,不输入直接回车就是前面的默认路径)</span><br></pre></td></tr></table></figure>
 
-    重复输入口令,上面没有设置就直接回车
-e. 最后是
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/Tekkub/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/Tekkub/.ssh/id_rsa.pub. </span><br><span class="line">The key fingerprint is: e8:ae:60:8f:38:c2:98:1d:6d:84:60:8c:9e:dd:47:81 max@meeit.com</span><br></pre></td></tr></table></figure>
+
+然后：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): (这里要你输入口令,可以直接回车)</span><br></pre></td></tr></table></figure>
+
+
+再然后：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter same passphrase again: (重复输入口令,上面没有设置就直接回车)</span><br></pre></td></tr></table></figure>
+
+
+最后是：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/Tekkub/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/Tekkub/.ssh/id_rsa.pub. </span><br><span class="line">The key fingerprint is: e8:ae:60:8f:38:c2:98:1d:6d:84:60:8c:9e:dd:47:81 max@meeit.com</span><br></pre></td></tr></table></figure>
 
 
 到这里,你的SSH keys 已经创建完毕,完后你到你SSH keys 保存目录里找到 id_rsa.pub 这个是保存你的公匙的文件,里面就是你的SSH keys 的公匙。
@@ -150,7 +154,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilt2vdle0000okfrlnub11p2" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilt33l910001nkfrrvx3l6sz" class="article-share-link">Share</a>
       
       
     </footer>
