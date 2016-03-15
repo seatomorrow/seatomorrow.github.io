@@ -114,13 +114,8 @@ The key fingerprint is: e8:ae:60:8f:38:c2:98:1d:6d:84:60:8c:9e:dd:47:81 max@meei
 
 到这里,你的SSH keys 已经创建完毕,完后你到你SSH keys 保存目录里找到 id_rsa.pub 这个是保存你的公匙的文件,里面就是你的SSH keys 的公匙。
 </code></pre><p>3、连接Github账户。<br>    登录Github，进入settings-&gt;SSH keys-&gt;New SSH key，Title可以随便写，把~/.ssh目录中文件id_rsa.pub的内容复制到Key，点击Add SSH key完成连接。</p>
-<p>4、设置免SSH密码。<br>    默认每次向Github push代码或者使用hexo deploy时都要输入Github账户名和密码。通过以下方法可以设置免密码登录。</p>
-<pre><code>进入%HOME%(默认c:/Users/xhm/)目录，新建一个名为&quot;_netrc&quot;的文件，文件中内容格式如下：
-machine {git account name}.github.com
-{your usernmae}
-{your password}
-重新打开git bash即可，无需再输入用户名和密码。
-</code></pre><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>下面说一下Hexo部分的配置。</p>
+<p>4、设置免SSH密码。<br>    默认每次向Github push代码或者使用hexo deploy时都要输入Github账户名和密码。通过以下方法可以设置免密码登录。<br>    进入%HOME%(默认c:/Users/xhm/)目录，新建一个名为”_netrc”的文件，文件中内容格式如下：<br>    machine {git account name}.github.com<br>    {your usernmae}<br>    {your password}<br>    重新打开git bash即可，无需再输入用户名和密码。</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>下面说一下Hexo部分的配置。</p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>打开Git Bash，输入下面命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
 <h3 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h3><p>在我的电脑中建立一个名字叫Hexo的文件夹，然后在此文件夹中右键打开Git Bash，然后输入：</p>
@@ -145,7 +140,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilssy0vn0001uwfrztmj8fzr" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilsszkau0000e8frqc57ipjz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -190,7 +185,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/13/hello-world/" data-id="cilssy0v70000uwfrvdc6cp35" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/13/hello-world/" data-id="cilsszkb90001e8frnftrcabc" class="article-share-link">Share</a>
       
       
     </footer>
