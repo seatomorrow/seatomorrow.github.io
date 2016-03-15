@@ -94,11 +94,8 @@
 <h3 id="SSH-Keys"><a href="#SSH-Keys" class="headerlink" title="SSH Keys"></a>SSH Keys</h3><p>远程仓库创建完成后需要和本地Git建立连接。这里是通过SSH Keys来实现的。</p>
 <p>1、首先检查电脑上现有的ssh key。<br>    打开Git Bash，输入下面命令，若包含id_rsa和id_rsa.pub这两个文件说明本地存在ssh keys否则需要生成ssh keys（也可以按下面的方式生成新的）</p>
 <pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ls</span><br></pre></td></tr></table></figure>
-</code></pre><p>2、配置ssh keys。<br>    在终端输入</p>
+</code></pre><p>2、配置ssh keys。<br>    在终端输入下面指令，然后按照提示输入对应信息即可。</p>
 <pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"man@meeit.com"</span>   (邮箱换成自己的)</span><br></pre></td></tr></table></figure>
-
-
-然后按照提示输入对应信息即可。
 </code></pre><p>3、连接Github账户。<br>    登录Github，进入settings-&gt;SSH keys-&gt;New SSH key，Title可以随便写，把~/.ssh目录中文件id_rsa.pub的内容复制到Key，点击Add SSH key完成连接。</p>
 <p>4、设置免SSH密码。<br>    默认每次向Github push代码或者使用hexo deploy时都要输入Github账户名和密码。通过以下方法可以设置免密码登录。<br>    进入%HOME%(默认c:/Users/xhm/)目录，新建一个名为”_netrc”的文件，文件中内容格式如下：<br>    machine {git account name}.github.com<br>    {your usernmae}<br>    {your password}<br>    重新打开git bash即可，无需再输入用户名和密码。</p>
 <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>下面说一下Hexo部分的配置。</p>
@@ -126,7 +123,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilt36ng50000o8frj5n14jok" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cilt37rjb0000b0frlh5d1fnr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +168,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/13/hello-world/" data-id="cilt36ngl0001o8fra4i5z01k" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/13/hello-world/" data-id="cilt37rjb0001b0frrm37jgbs" class="article-share-link">Share</a>
       
       
     </footer>
