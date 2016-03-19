@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SQL中的case when then else end用法 | SeaTomorrow的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
+
+简单Case函数
+CASE sex   WHEN ‘1’ THEN ‘男’   WHEN ‘2’ THEN ‘女’ELSE ‘其他’ END
+
+Case搜索函数CASE WHEN sex = ‘1’ THEN ‘男’
+WHEN sex = &amp;apos;2&amp;apos; THEN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL中的case when then else end用法">
+<meta property="og:url" content="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/index.html">
+<meta property="og:site_name" content="SeaTomorrow的博客">
+<meta property="og:description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
+
+简单Case函数
+CASE sex   WHEN ‘1’ THEN ‘男’   WHEN ‘2’ THEN ‘女’ELSE ‘其他’ END
+
+Case搜索函数CASE WHEN sex = ‘1’ THEN ‘男’
+WHEN sex = &amp;apos;2&amp;apos; THEN">
+<meta property="og:updated_time" content="2016-03-19T14:32:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL中的case when then else end用法">
+<meta name="twitter:description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
+
+简单Case函数
+CASE sex   WHEN ‘1’ THEN ‘男’   WHEN ‘2’ THEN ‘女’ELSE ‘其他’ END
+
+Case搜索函数CASE WHEN sex = ‘1’ THEN ‘男’
+WHEN sex = &amp;apos;2&amp;apos; THEN">
+  
+    <link rel="alternate" href="/atom.xml" title="SeaTomorrow的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SeaTomorrow的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://seatomorrow.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-SQL中的case-when-then-else-end用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/19/SQL中的case-when-then-else-end用法/" class="article-date">
+  <time datetime="2016-03-19T14:24:29.000Z" itemprop="datePublished">2016-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SQL中的case when then else end用法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SQL中的case-when-then-else-end用法"><a href="#SQL中的case-when-then-else-end用法" class="headerlink" title="SQL中的case when then else end用法"></a>SQL中的case when then else end用法</h2><p>Case具有两种格式。简单Case函数和Case搜索函数。</p>
+<ul>
+<li><p><strong>简单Case函数</strong></p>
+<p>CASE sex<br>   WHEN ‘1’ THEN ‘男’<br>   WHEN ‘2’ THEN ‘女’<br>ELSE ‘其他’ END</p>
+</li>
+<li><p><strong>Case搜索函数</strong><br>CASE WHEN sex = ‘1’ THEN ‘男’</p>
+<pre><code>WHEN sex = &apos;2&apos; THEN &apos;女&apos;
+</code></pre><p>ELSE ‘其他’ END</p>
+</li>
+</ul>
+<p>这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简洁，但是和Case搜索函数相比，功能方面会有些限制，比如写判断式。<br>还有一个需要注意的问题，Case函数只返回第一个符合条件的值，剩下的Case部分将会被自动忽略。 </p>
+<p>–比如说，下面这段SQL，你永远无法得到“第二类”这个结果<br>CASE WHEN col_1 IN ( ‘a’, ‘b’) THEN ‘第一类’<br>         WHEN col_1 IN (‘a’)       THEN ‘第二类’<br>ELSE’其他’ END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cilz8hkwd0000okfrrhzsltya" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/15/Github-Hexo博客搭建教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Github+Hexo博客搭建教程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/03/19/SQL中的case-when-then-else-end用法/">SQL中的case when then else end用法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/Github-Hexo博客搭建教程/">Github+Hexo博客搭建教程</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 SeaTomorrow<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
