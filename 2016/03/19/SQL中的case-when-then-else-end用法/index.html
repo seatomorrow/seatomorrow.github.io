@@ -8,10 +8,13 @@
   <meta name="description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
 
 简单Case函数
-  CASE sex  WHEN ‘1’ THEN ‘男’  WHEN ‘2’ THEN ‘女’  ELSE ‘其他’  END
+
+CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
 
 Case搜索函数
-  CASE  WHEN sex = ‘1’ THEN ‘男’  WHEN sex = ‘2’ THEN ‘女">
+
+CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
+这两">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL中的case when then else end用法">
 <meta property="og:url" content="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/index.html">
@@ -19,20 +22,26 @@ Case搜索函数
 <meta property="og:description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
 
 简单Case函数
-  CASE sex  WHEN ‘1’ THEN ‘男’  WHEN ‘2’ THEN ‘女’  ELSE ‘其他’  END
+
+CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
 
 Case搜索函数
-  CASE  WHEN sex = ‘1’ THEN ‘男’  WHEN sex = ‘2’ THEN ‘女">
-<meta property="og:updated_time" content="2016-03-20T04:40:38.000Z">
+
+CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
+这两">
+<meta property="og:updated_time" content="2016-03-20T04:42:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL中的case when then else end用法">
 <meta name="twitter:description" content="SQL中的case when then else end用法Case具有两种格式。简单Case函数和Case搜索函数。
 
 简单Case函数
-  CASE sex  WHEN ‘1’ THEN ‘男’  WHEN ‘2’ THEN ‘女’  ELSE ‘其他’  END
+
+CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
 
 Case搜索函数
-  CASE  WHEN sex = ‘1’ THEN ‘男’  WHEN sex = ‘2’ THEN ‘女">
+
+CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
+这两">
   
     <link rel="alternate" href="/atom.xml" title="SeaTomorrow的博客" type="application/atom+xml">
   
@@ -105,13 +114,13 @@ Case搜索函数
       
         <h2 id="SQL中的case-when-then-else-end用法"><a href="#SQL中的case-when-then-else-end用法" class="headerlink" title="SQL中的case when then else end用法"></a>SQL中的case when then else end用法</h2><p>Case具有两种格式。简单Case函数和Case搜索函数。</p>
 <ul>
-<li><p><strong>简单Case函数</strong></p>
-<p>  CASE sex<br>  WHEN ‘1’ THEN ‘男’<br>  WHEN ‘2’ THEN ‘女’<br>  ELSE ‘其他’<br>  END</p>
-</li>
-<li><p><strong>Case搜索函数</strong></p>
-<p>  CASE<br>  WHEN sex = ‘1’ THEN ‘男’<br>  WHEN sex = ‘2’ THEN ‘女’<br>  ELSE ‘其他’<br>  END</p>
-</li>
+<li><strong>简单Case函数</strong></li>
 </ul>
+<p>CASE sex<br>WHEN ‘1’ THEN ‘男’<br>WHEN ‘2’ THEN ‘女’<br>ELSE’其他’<br>END</p>
+<ul>
+<li><strong>Case搜索函数</strong></li>
+</ul>
+<p>CASE<br>WHEN sex = ‘1’ THEN ‘男’<br>WHEN sex = ‘2’ THEN ‘女’<br>ELSE’其他’<br>END</p>
 <p>这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简洁，但是和Case搜索函数相比，功能方面会有些限制，比如写判断式。</p>
 <p>还有一个需要注意的问题，Case函数只返回第一个符合条件的值，剩下的Case部分将会被自动忽略。比如说，下面这段SQL，你永远无法得到“第二类”这个结果</p>
 <p>CASE<br>WHEN col_1 IN ( ‘a’, ‘b’) THEN ‘第一类’<br>WHEN col_1 IN (‘a’)       THEN ‘第二类’<br>ELSE’其他’<br>END</p>
@@ -119,7 +128,7 @@ Case搜索函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cim02sczb0000gkfr209rc32i" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cim02v5lk0000kofr4lkvohuc" class="article-share-link">Share</a>
       
       
     </footer>
