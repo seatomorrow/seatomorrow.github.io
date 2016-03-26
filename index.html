@@ -104,21 +104,13 @@
 <p>public class Singleton1 {<br>    private Singleton1() {}<br>    private static Singleton1 instance = new Singleton1();<br>    public Singleton1 getInstance()<br>        return instance;<br>    }<br>}</p>
 <p>这种方法可以避免多线程的问题，但是实例是在类被加载时创建的而不是调用getInstance()函数被创建，存在一定的隐患。</p>
 <h2 id="方法4"><a href="#方法4" class="headerlink" title="方法4"></a>方法4</h2><p>使用内部类，代码如下：</p>
-<p><code>class Singleton1 {
-    private Singleton1() {}
-    public static Singleton1 getInstance() {
-        return Nest.instance;
-    }
-    static class Nest {
-        public static Singleton1 instance = new Singleton1();
-    }
-}</code></p>
+<p><code><br>class Singleton1 {<br>    private Singleton1() {}<br>    public static Singleton1 getInstance() {<br>        return Nest.instance;<br>    }<br>    static class Nest {<br>        public static Singleton1 instance = new Singleton1();<br>    }<br>}<br></code></p>
 <p>无论多少个线程执行return Nest.instance这行代码，Nest.instance第一次被调用时Nest类会被加载到内存，然后直接创建instance实例。这样的好处是不会产生多线程问题，而且实例是在调用getInstance()方法时被创建的。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cim8vp89r0002esfrzyig4gdv" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cim8vubsx0002egfr8490v876" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cim8vp89b0001esfrcy2r49gz" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cim8vubsx0001egfrji16qnh6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,7 +227,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cim8vp89b0000esfroxywo8xc" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/15/Github-Hexo博客搭建教程/" data-id="cim8vubsi0000egfrafing5u3" class="article-share-link">Share</a>
       
       
     </footer>

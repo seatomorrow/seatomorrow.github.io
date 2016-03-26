@@ -15,7 +15,7 @@ public class Singleton1 {    p">
 <meta property="og:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
 方法1为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：
 public class Singleton1 {    p">
-<meta property="og:updated_time" content="2016-03-26T08:32:02.000Z">
+<meta property="og:updated_time" content="2016-03-26T08:36:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单例模模式">
 <meta name="twitter:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
@@ -109,21 +109,13 @@ public class Singleton1 {    p">
 <p>public class Singleton1 {<br>    private Singleton1() {}<br>    private static Singleton1 instance = new Singleton1();<br>    public Singleton1 getInstance()<br>        return instance;<br>    }<br>}</p>
 <p>这种方法可以避免多线程的问题，但是实例是在类被加载时创建的而不是调用getInstance()函数被创建，存在一定的隐患。</p>
 <h2 id="方法4"><a href="#方法4" class="headerlink" title="方法4"></a>方法4</h2><p>使用内部类，代码如下：</p>
-<p><code>class Singleton1 {
-    private Singleton1() {}
-    public static Singleton1 getInstance() {
-        return Nest.instance;
-    }
-    static class Nest {
-        public static Singleton1 instance = new Singleton1();
-    }
-}</code></p>
+<p><code><br>class Singleton1 {<br>    private Singleton1() {}<br>    public static Singleton1 getInstance() {<br>        return Nest.instance;<br>    }<br>    static class Nest {<br>        public static Singleton1 instance = new Singleton1();<br>    }<br>}<br></code></p>
 <p>无论多少个线程执行return Nest.instance这行代码，Nest.instance第一次被调用时Nest类会被加载到内存，然后直接创建instance实例。这样的好处是不会产生多线程问题，而且实例是在调用getInstance()方法时被创建的。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cim8vp89r0002esfrzyig4gdv" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cim8vubsx0002egfr8490v876" class="article-share-link">Share</a>
       
       
     </footer>
