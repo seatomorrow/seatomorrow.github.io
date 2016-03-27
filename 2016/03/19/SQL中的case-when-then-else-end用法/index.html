@@ -9,12 +9,12 @@
 
 简单Case函数
 
-CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
+12345CASE sexWHEN &apos;1&apos; THEN &apos;男&apos;WHEN &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
 
 Case搜索函数
 
-CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
-这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简">
+12345CASE WHEN sex = &apos;1&apos; THEN &apos;男&apos;WHEN sex = &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
+这两种方式，可以实现相同的功能。简单C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL中的case when then else end用法">
 <meta property="og:url" content="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/index.html">
@@ -23,25 +23,25 @@ CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其
 
 简单Case函数
 
-CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
+12345CASE sexWHEN &apos;1&apos; THEN &apos;男&apos;WHEN &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
 
 Case搜索函数
 
-CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
-这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简">
-<meta property="og:updated_time" content="2016-03-26T08:40:28.000Z">
+12345CASE WHEN sex = &apos;1&apos; THEN &apos;男&apos;WHEN sex = &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
+这两种方式，可以实现相同的功能。简单C">
+<meta property="og:updated_time" content="2016-03-27T16:38:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL中的case when then else end用法">
 <meta name="twitter:description" content="Case具有两种格式。简单Case函数和Case搜索函数。
 
 简单Case函数
 
-CASE sexWHEN ‘1’ THEN ‘男’WHEN ‘2’ THEN ‘女’ELSE’其他’END
+12345CASE sexWHEN &apos;1&apos; THEN &apos;男&apos;WHEN &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
 
 Case搜索函数
 
-CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其他’END
-这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简">
+12345CASE WHEN sex = &apos;1&apos; THEN &apos;男&apos;WHEN sex = &apos;2&apos; THEN &apos;女&apos;ELSE&apos;其他&apos; END
+这两种方式，可以实现相同的功能。简单C">
   
     <link rel="alternate" href="/atom.xml" title="SeaTomorrow的博客" type="application/atom+xml">
   
@@ -116,19 +116,18 @@ CASEWHEN sex = ‘1’ THEN ‘男’WHEN sex = ‘2’ THEN ‘女’ELSE’其
 <ul>
 <li><strong>简单Case函数</strong></li>
 </ul>
-<p><code><br>CASE sex<br>WHEN ‘1’ THEN ‘男’<br>WHEN ‘2’ THEN ‘女’<br>ELSE’其他’<br>END<br></code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CASE sex</span><br><span class="line">WHEN '1' THEN '男'</span><br><span class="line">WHEN '2' THEN '女'</span><br><span class="line">ELSE'其他' </span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>Case搜索函数</strong></li>
 </ul>
-<p><code><br>CASE<br>WHEN sex = ‘1’ THEN ‘男’<br>WHEN sex = ‘2’ THEN ‘女’<br>ELSE’其他’<br>END<br></code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CASE </span><br><span class="line">WHEN sex = '1' THEN '男'</span><br><span class="line">WHEN sex = '2' THEN '女'</span><br><span class="line">ELSE'其他' </span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
 <p>这两种方式，可以实现相同的功能。简单Case函数的写法相对比较简洁，但是和Case搜索函数相比，功能方面会有些限制，比如写判断式。</p>
 <p>还有一个需要注意的问题，Case函数只返回第一个符合条件的值，剩下的Case部分将会被自动忽略。比如说，下面这段SQL，你永远无法得到“第二类”这个结果</p>
-<p><code><br>CASE<br>WHEN col_1 IN ( ‘a’, ‘b’) THEN ‘第一类’<br>WHEN col_1 IN (‘a’)       THEN ‘第二类’<br>ELSE’其他’<br>END<br></code></p>
-
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CASE </span><br><span class="line">WHEN col_1 IN ( 'a', 'b') THEN '第一类'</span><br><span class="line">WHEN col_1 IN ('a')       THEN '第二类'</span><br><span class="line">ELSE'其他' </span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cimasg8pf0001o4frpa2d07s1" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/19/SQL中的case-when-then-else-end用法/" data-id="cimaspcsp0001wgfrytkdnk5q" class="article-share-link">Share</a>
       
       
     </footer>

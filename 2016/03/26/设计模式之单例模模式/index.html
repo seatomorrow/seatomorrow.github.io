@@ -15,7 +15,7 @@
 <meta property="og:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
 方法1为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：
 12345678public class Singleton">
-<meta property="og:updated_time" content="2016-03-27T16:36:44.000Z">
+<meta property="og:updated_time" content="2016-03-27T16:37:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单例模模式">
 <meta name="twitter:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
@@ -104,8 +104,8 @@
 <li><strong> 同步代码块 </strong>：</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 instance = <span class="function"><span class="keyword">null</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Singleton1 <span class="title">getInstance</span><span class="params">()</span></span><br><span class="line">        <span class="title">synchronized</span><span class="params">(Singleton1.class)</span> </span>&#123;        <span class="comment">//如果同步非静态方法，则用synchronized(this) &#123;...&#125;</span></span><br><span class="line">            <span class="keyword">if</span> (instance ==<span class="keyword">null</span>) instance = <span class="keyword">new</span> Singleton1();</span><br><span class="line">                <span class="keyword">return</span> instance;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>但是加锁操作本身是非常耗时的，而且这也影响了并发的效率。
-</code></pre><h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>直接在定义实例时即初始化，代码如下：</p>
+<p>但是加锁操作本身是非常耗时的，而且这也影响了并发的效率。</p>
+<h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>直接在定义实例时即初始化，代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 instance = <span class="keyword">new</span> Singleton1();    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Singleton1 <span class="title">getInstance</span><span class="params">()</span></span><br><span class="line">        return instance</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方法可以避免多线程的问题，但是实例是在类被加载时创建的而不是调用getInstance()函数被创建，存在一定的隐患。</p>
 <h2 id="方法4"><a href="#方法4" class="headerlink" title="方法4"></a>方法4</h2><p>使用内部类，代码如下：</p>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cimasg8pf0002o4frbank7lta" class="article-share-link">Share</a>
+      <a data-url="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/" data-id="cimaspcsu0002wgfrpqdvzjt5" class="article-share-link">Share</a>
       
       
     </footer>
