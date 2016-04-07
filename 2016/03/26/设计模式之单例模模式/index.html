@@ -6,22 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>设计模式之单例模模式 | SeaTomorrow的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
-方法1为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：
-12345678public class Singleton">
+  <meta name="description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之单例模模式">
 <meta property="og:url" content="http://seatomorrow.github.io/2016/03/26/设计模式之单例模模式/index.html">
 <meta property="og:site_name" content="SeaTomorrow的博客">
-<meta property="og:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
-方法1为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：
-12345678public class Singleton">
-<meta property="og:updated_time" content="2016-03-27T16:37:42.000Z">
+<meta property="og:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。">
+<meta property="og:updated_time" content="2016-04-07T15:11:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单例模模式">
-<meta name="twitter:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。
-方法1为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：
-12345678public class Singleton">
+<meta name="twitter:description" content="单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。">
   
     <link rel="alternative" href="/atom.xml" title="SeaTomorrow的博客" type="application/atom+xml">
   
@@ -84,7 +78,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -115,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
 					</div>
 				</section>
 				
@@ -206,6 +200,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -215,6 +213,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>单例模式是所有设计模式中最简单也是最基本的模式，顾名思义单例模式即保证一个类在整个程序运行期间只有一个实例。单例模式可以有很多种实现方式，但不同的方式有不同的优缺点，下面逐个说明。</p>
+<a id="more"></a>
 <h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>为了不让其他的调用者随意实例化该类，我们想到的是将构造函数设为private，然后构造实例在类中进行，暴露一个接口给外面可以访问类中的实例。代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span> </span>&#123;&#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 instance = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton1 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance ==<span class="keyword">null</span>) instance = <span class="keyword">new</span> Singleton1();</span><br><span class="line">        <span class="keyword">return</span> instance;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方法简单容易理解，但是应用于多线程环境会出问题。当两个线程同时运行到if (instance == null)时，由于此时实例还没有被创建所以两个线程都会执行下一步创建实例。就无法保证单例了。</p>
