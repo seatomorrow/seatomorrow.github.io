@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://seatomorrow.github.io/2016/04/17/Bit-map（位图）/index.html">
 <meta property="og:site_name" content="SeaTomorrow的博客">
 <meta property="og:description" content="本文介绍了Bit-map（位图）的相关内容">
-<meta property="og:updated_time" content="2016-04-16T16:31:36.000Z">
+<meta property="og:updated_time" content="2016-04-16T16:32:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bit-map（位图）">
 <meta name="twitter:description" content="本文介绍了Bit-map（位图）的相关内容">
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -232,7 +232,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>位图是通过位数组这种数据结构来表示某些元素是否在集合中出现，适用于海量数据的排序、快速查找、判重、去重等。<br><a id="more"></a><br>位图的原理是将集合中的数据映射到比特数组上，数组上每一个位代表该数据是否出现，这就要求这个集合的数据<code>状态是离散的，并且存在一个范围中</code>理想的情况数据本身可以表示成数字。</p>
+        <p>位图是通过位数组这种数据结构来表示某些元素是否在集合中出现，适用于海量数据的排序、快速查找、判重、去重等。<br><a id="more"></a><br>位图的原理是将集合中的数据映射到比特数组上，数组上每一个位代表该数据是否出现，这就要求这个集合的数据<code>状态是离散的，并且存在一个范围中</code>，理想的情况数据本身可以表示成数字。</p>
 <ul>
 <li>排序<br>应用位图进行排序首先要确定数据的范围，确定位图的上下限，然后将数据依次映射到位图上（如果存在就置1），最后再遍历一遍位图获得排序后的结果。复杂度为O(n)。</li>
 <li>快速查找<br>这个很好理解，直接看对应位图上的位是否为1即可</li>
