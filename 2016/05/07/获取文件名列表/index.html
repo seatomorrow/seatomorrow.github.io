@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>获取文件名列表 | SeaTomorrow的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一个获取文件名列表的小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="获取文件名列表">
+<meta property="og:url" content="http://seatomorrow.github.io/2016/05/07/获取文件名列表/index.html">
+<meta property="og:site_name" content="SeaTomorrow的博客">
+<meta property="og:description" content="一个获取文件名列表的小程序">
+<meta property="og:updated_time" content="2016-05-07T15:32:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="获取文件名列表">
+<meta name="twitter:description" content="一个获取文件名列表的小程序">
+  
+    <link rel="alternative" href="/atom.xml" title="SeaTomorrow的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?169fd278943e2da64e1952135181dbc3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xss64.com1.z0.glb.clouddn.com/kenan.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">SeaTomorrow</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">归档</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/seatomorrow/" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Bit-map/" style="font-size: 10px;">Bit-map</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/个人博客/" style="font-size: 10px;">个人博客</a> <a href="/tags/位图/" style="font-size: 10px;">位图</a> <a href="/tags/单例模式/" style="font-size: 10px;">单例模式</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/情感/" style="font-size: 10px;">情感</a> <a href="/tags/海量数据处理/" style="font-size: 10px;">海量数据处理</a> <a href="/tags/获取文件名列表/" style="font-size: 10px;">获取文件名列表</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/tec-vegetables/">小白菜的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">千里之行，始于足下</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">SeaTomorrow</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xss64.com1.z0.glb.clouddn.com/kenan.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">SeaTomorrow</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/seatomorrow/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-获取文件名列表" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/07/获取文件名列表/" class="article-date">
+  	<time datetime="2016-05-07T15:11:12.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      获取文件名列表
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/获取文件名列表/">获取文件名列表</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/奇技淫巧/">奇技淫巧</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在做项目的时候遇到一种应用场景，给定一个文件夹URL，获取该URL下包含的所有文本文件的URL（URL下可能包含子文件夹，子文件夹的文件也要获取）。思路很简单，但是在编写的过程中遇到了一些有意思的问题。<br><a id="more"></a><br>我用的语言是java，使用的File类里的list方法即可获取给定路径下所有文件和文件夹的名称，然后递归的进入到每个子文件夹，重复list即可，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 输入：某个目录路径</span><br><span class="line"> * 每次调用nextPath()返回一个path</span><br><span class="line"> * <span class="doctag">@author</span> xhm</span><br><span class="line"> *</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TextPathGetter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	List&lt;String&gt; textPathList = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">	<span class="keyword">int</span> index, total;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">TextPathGetter_old</span><span class="params">(String rootPath)</span> </span>&#123;</span><br><span class="line">		String newPath = pathExchange(rootPath);</span><br><span class="line">		recursiver(newPath);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">private</span> String <span class="title">pathExchange</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (path.contains(<span class="string">"\\"</span>)) &#123;</span><br><span class="line">			path = path.replace(<span class="string">"\\"</span>, <span class="string">"/"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!path.endsWith(<span class="string">"/"</span>)) path = path + <span class="string">"/"</span>;</span><br><span class="line">		<span class="keyword">return</span> path;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * 检测当前路径是否包含.txt文件，否则是文件夹路径，是则是文本文件路径（readme.txt和timepoint.txt允许在任意位置存在）</span><br><span class="line">	 * <span class="doctag">@param</span> path</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">recursiver</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">		File f = <span class="keyword">new</span> File(path);</span><br><span class="line">		Long start = System.currentTimeMillis();</span><br><span class="line">		String[] fRes = f.list();</span><br><span class="line">		System.out.println(System.currentTimeMillis()-start);</span><br><span class="line">		<span class="keyword">for</span> (String s : fRes) &#123;</span><br><span class="line">			String sPath = path + s + <span class="string">"/"</span>;</span><br><span class="line">			File sFile = <span class="keyword">new</span> File(sPath);</span><br><span class="line">			<span class="keyword">if</span> (sFile.isFile() &amp;&amp; s.endsWith(<span class="string">".txt"</span>) &amp;&amp; !s.equals(<span class="string">"readme.txt"</span>)</span><br><span class="line">					&amp;&amp; !s.equals(<span class="string">"timepoint.txt"</span>)) &#123;</span><br><span class="line">				total++;</span><br><span class="line">				System.out.println(total);</span><br><span class="line">				textPathList.add(sPath);</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span> (sFile.isDirectory()) &#123;</span><br><span class="line">				recursiver(sPath);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * 先返回path，再将index指向下一个path</span><br><span class="line">	 * <span class="doctag">@return</span></span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">nextPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (index == textPathList.size()) <span class="keyword">return</span> <span class="keyword">new</span> String();</span><br><span class="line">		String res = textPathList.get(index);</span><br><span class="line">		index++;</span><br><span class="line">		System.out.println(res);</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		TextPathGetter_old tpg = <span class="keyword">new</span> TextPathGetter_old(<span class="string">"E:\\alldata_xhm\\new_military\\dataset\\taiwan_news\\news_setn"</span>);</span><br><span class="line">		String path;</span><br><span class="line">		<span class="keyword">while</span> (!(path=tpg.nextPath()).equals(<span class="string">""</span>)) &#123;</span><br><span class="line">			System.out.println(path);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到代码的思路是通过递归把所有的URL存到一个List中，然后设置一个位置指示器index，每次调用nextPath()方法即可获得一个文件URL，然后index不断累加即可。<br>上面的方法有一个致命的问题是把URL都存在了内存中，当文件数目很大（百万级别）、文件名很长时，存储List会占用很大的内存，容易导致程序OOM。解决的办法是将递归过程中得到的URL存入文件中，然后开一个Scanner，每次nextPath()时执行一次sc.nextLine()方法从文件中读入一个URL返回。代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 输入：某个目录路径</span><br><span class="line"> * 每次调用nextPath()返回一个path</span><br><span class="line"> * <span class="doctag">@author</span> xhm</span><br><span class="line"> *</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TextPathGetter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> index, total;</span><br><span class="line">	PrintWriter pw;</span><br><span class="line">	Scanner sc;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">TextPathGetter</span><span class="params">(String rootPath)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			String newPath = pathExchange(rootPath);</span><br><span class="line">			pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"tempFile.txt"</span>)));</span><br><span class="line">			recursiver(newPath);</span><br><span class="line">			pw.close();</span><br><span class="line">			sc = <span class="keyword">new</span> Scanner(<span class="keyword">new</span> FileInputStream(<span class="string">"tempFile.txt"</span>));</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">private</span> String <span class="title">pathExchange</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (path.contains(<span class="string">"\\"</span>)) &#123;</span><br><span class="line">			path = path.replace(<span class="string">"\\"</span>, <span class="string">"/"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!path.endsWith(<span class="string">"/"</span>)) path = path + <span class="string">"/"</span>;</span><br><span class="line">		<span class="keyword">return</span> path;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * 检测当前路径是否包含.txt文件，否则是文件夹路径，是则是文本文件路径（readme.txt和timepoint.txt允许在任意位置存在）</span><br><span class="line">	 * <span class="doctag">@param</span> path</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">recursiver</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">		File f = <span class="keyword">new</span> File(path);</span><br><span class="line">		<span class="keyword">for</span> (String s : f.list()) &#123;</span><br><span class="line">			String sPath = path + s + <span class="string">"/"</span>;</span><br><span class="line">			File sFile = <span class="keyword">new</span> File(sPath);</span><br><span class="line">			<span class="keyword">if</span> (sFile.isFile() &amp;&amp; s.endsWith(<span class="string">".txt"</span>) &amp;&amp; !s.equals(<span class="string">"readme.txt"</span>)</span><br><span class="line">					&amp;&amp; !s.equals(<span class="string">"timepoint.txt"</span>)) &#123;</span><br><span class="line">				pw.println(sPath);</span><br><span class="line">				total++;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (sFile.isDirectory()) &#123;</span><br><span class="line">				recursiver(sPath);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * 先返回path，再将index指向下一个path</span><br><span class="line">	 * <span class="doctag">@return</span></span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">nextPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (sc == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">new</span> String();</span><br><span class="line">		<span class="keyword">if</span> (sc.hasNext()) &#123;</span><br><span class="line">			String res = sc.nextLine();</span><br><span class="line">			index++;</span><br><span class="line">			System.out.println(<span class="string">"第"</span>+index+<span class="string">"篇文档/"</span>+total);</span><br><span class="line">			<span class="keyword">return</span> res;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			sc.close();</span><br><span class="line">			sc = <span class="keyword">null</span>;</span><br><span class="line">			<span class="comment">// 删除文件</span></span><br><span class="line">			File f = <span class="keyword">new</span> File(<span class="string">"tempFile.txt"</span>);</span><br><span class="line">			f.delete();</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> String();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样处理后就不会出现OOM这种问题了。这个程序还可以考虑扩展一下，比如增加黑名单功能，像程序中对timepoint.txt和readme.txt的操作那样。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/17/Bit-map（位图）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Bit-map（位图）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="获取文件名列表" data-title="获取文件名列表" data-url="http://seatomorrow.github.io/2016/05/07/获取文件名列表/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 SeaTomorrow
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
